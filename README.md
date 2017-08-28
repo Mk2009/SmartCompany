@@ -1,6 +1,6 @@
 # SmartCompany
 This is an ASP.NET C# website for a company. 
-I built it in Visual Studio 2012 and upgrade it to Visual Studio 2015. 
+I built it in Visual Studio 2012 and upgraded it to Visual Studio 2015. 
 
 You will know how to CRUD both Sql server db and xml in easy way.
 I used LinqToSql for SQL SERVER DB.
