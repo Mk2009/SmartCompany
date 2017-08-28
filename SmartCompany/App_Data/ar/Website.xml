@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Website>
+    <Company>اسم الشركة</Company>
+    <Title>موقع شركة</Title>
+    <Logo>~/Uploads/Images/logo.png</Logo>
+    <Copyright>كافة الحقوق محفوظة</Copyright>
+    <WebDeveloper>مختار السروري - ج:967-713171018</WebDeveloper>
+  </Website>
+</DocumentElement>

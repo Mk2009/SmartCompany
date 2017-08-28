@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Script/Jquery/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // First, we need to hide all the sections.
+            $('.tab-section').hide();
+            // Next, we need to show the appropriate section when one of our tabs is clicked. 
+            $('#tabs a').bind('click', function (e) {
+                $('.tab-section:visible').hide();
+                $(this.hash).show();
+                $(this).addClass('current');
+                e.preventDefault();
+            }).filter(':first').click();// Here we tell jQuery to click the first tab for us, as a result it run our function.
+        });
+    </script>
+    <style type="text/css">
+    #tabs {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    zoom: 1;
+    position:relative;
+    top:2px;
+    z-index: 1;
+}
+ 
+#tabs li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    margin-right: 1px;
+    padding: 0;
+    float: left;
+}
+ 
+#tabs li a {
+    display: block;
+    padding: 2px 10px;
+    border: 2px solid #817bfc;
+    border-bottom: 0 none;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+.tab-section {
+    background:#d4efff;
+    padding: 10px;
+    border: 2px solid #817bfc;
+}
+ 
+#tabs li a.current {
+    background: #d4efff;
+    color: #000;
+    border-bottom: 2px solid #d4efff;
+}
+    </style>
+</head>
+<body>
+<h1>Simple Tabs</h1>
+<ul id="tabs">
+    <li><a href="#java">Java</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#python">Python</a></li>
+    <li><a href="#ruby">Ruby</a></li>
+    <li><a href="#perl">Perl</a></li>
+</ul>
+ 
+<div id="java" class="tab-section">
+    <h2>Here we place title</h2>
+    <p>Here we place details of java </p>
+</div>
+<div id="php" class="tab-section">
+    <h2>Here we place title</h2>
+    <p>Here we place details of php  </p>
+</div>
+<div id="python" class="tab-section">
+    <h2>Here we place title</h2>
+    <p>Here we place details of python  </p>
+</div>
+<div id="ruby" class="tab-section">
+    <h2>Here we place title</h2>
+    <p>Here we place details  of ruby </p>
+</div>
+<div id="perl" class="tab-section">
+    <h2>Here we place title</h2>
+    <p>Here we place details of perl  </p>
+</div>
+</body>
+</html>

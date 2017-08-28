@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SmartCompany" Class="SmartCompanyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=SmartCompany;Integrated Security=True" SettingsObjectName="SmartCompany.Properties.Settings" SettingsPropertyName="ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="Control.Privilege" Member="Privileges">
+    <Type Name="Privilege">
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Privilege_SysUser" Member="SysUsers" ThisKey="Id" OtherKey="Privilege_Id" Type="SysUser" />
+    </Type>
+  </Table>
+  <Table Name="Control.SysUser" Member="SysUsers">
+    <Type Name="SysUser">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Privilege_Id" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="JoinDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SysUser_SysUserLogStatus" Member="SysUserLogStatus" ThisKey="Id" OtherKey="SysUser_Id" Type="SysUserLogStatus" />
+      <Association Name="SysUser_Service" Member="Services" ThisKey="Id" OtherKey="EditedBy_Id" Type="Service" />
+      <Association Name="Privilege_SysUser" Member="Privilege" ThisKey="Privilege_Id" OtherKey="Id" Type="Privilege" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Control.SysUserLogStatus" Member="SysUserLogStatus">
+    <Type Name="SysUserLogStatus">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SysUser_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="LoginDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LogoutTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="LogoutDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LogIn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="SysUser_SysUserLogStatus" Member="SysUser" ThisKey="SysUser_Id" OtherKey="Id" Type="SysUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Control.LoginTries" Member="LoginTries">
+    <Type Name="LoginTry">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EnteredUserName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="EnteredPassword" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ComputerName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MacAddress" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LoginDate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="TriesTimes" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Block" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Company.Visitor" Member="Visitors">
+    <Type Name="Visitor">
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Page" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Day" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Week" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AllVisitor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Visitor_VisitorPage" Member="VisitorPages" ThisKey="Id" OtherKey="Visitor_Id" Type="VisitorPage" />
+    </Type>
+  </Table>
+  <Table Name="Company.VisitorPage" Member="VisitorPages">
+    <Type Name="VisitorPage">
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Language" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="TitlePage" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Visitor_Id" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="Visitor_VisitorPage" Member="Visitor" ThisKey="Visitor_Id" OtherKey="Id" Type="Visitor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Company.ContactUs" Member="ContactUs">
+    <Type Name="ContactUs">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SentDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="MachineName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MacAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Business.Service" Member="Services">
+    <Type Name="Service">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItsService" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Slide" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EditedBy_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Show" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Service_ServiceTitle" Member="ServiceTitles" ThisKey="Id" OtherKey="Service_Id" Type="ServiceTitle" />
+      <Association Name="SysUser_Service" Member="SysUser" ThisKey="EditedBy_Id" OtherKey="Id" Type="SysUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Business.ServiceTitle" Member="ServiceTitles">
+    <Type Name="ServiceTitle">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Service_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Language" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Service_ServiceTitle" Member="Service" ThisKey="Service_Id" OtherKey="Id" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="Business.InsertContent" Method="InsertContent">
+    <Parameter Name="ItsService" Parameter="itsService" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <Parameter Name="ImagePath" Parameter="imagePath" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Slide" Parameter="slide" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EditedBy_Id" Parameter="editedBy_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ModifiedDate" Parameter="modifiedDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Show" Parameter="show" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Company.SearchContacts" Method="SearchContacts">
+    <Parameter Name="KeyWord" Parameter="keyWord" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="SearchContactsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SentDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Company.InsertContacts" Method="InsertContacts">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="Message" Parameter="message" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="SentDate" Parameter="sentDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(16)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="MacAddress" Parameter="macAddress" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Company.InsertSentEmail" Method="InsertSentEmail">
+    <Parameter Name="ToEmail" Parameter="toEmail" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="Subject" Parameter="subject" Type="System.String" DbType="NVarChar(160)" />
+    <Parameter Name="Message" Parameter="message" Type="System.String" DbType="NVarChar(1200)" />
+    <Parameter Name="SentDate" Parameter="sentDate" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Control.InsertSysUser" Method="InsertSysUser">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="Privilege_Id" Parameter="privilege_Id" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="JoinDate" Parameter="joinDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Active" Parameter="active" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Control.SelectUser" Method="SelectUser">
+    <ElementType Name="SelectUserResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(61)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Privilege" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Company.SearchUser" Method="SearchUser">
+    <Parameter Name="KeyWord" Parameter="keyWord" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="SearchUserResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(61)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Privilege" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Control.DeleteUser" Method="DeleteUser">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Control.ChangeCurrentUserPassword" Method="ChangeCurrentUserPassword">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OldPasswordHas" Parameter="oldPasswordHas" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="NewPasswordHas" Parameter="newPasswordHas" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Control.InsertSysUserLogStatus" Method="InsertSysUserLogStatus">
+    <Parameter Name="SysUser_Id" Parameter="sysUser_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LoginTime" Parameter="loginTime" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="LoginDate" Parameter="loginDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="LogIn" Parameter="logIn" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Control.InsertLoginTries" Method="InsertLoginTries">
+    <Parameter Name="EnteredUserName" Parameter="enteredUserName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="EnteredPassword" Parameter="enteredPassword" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="ComputerName" Parameter="computerName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="MacAddress" Parameter="macAddress" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="LoginDate" Parameter="loginDate" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="TriesTimes" Parameter="triesTimes" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Company.CalculateVisitor" Method="CalculateVisitor">
+    <Parameter Name="Page" Parameter="page" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Control.ControlPanelAuthentication" Method="ControlPanelAuthentication">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="PasswordHash" Parameter="passwordHash" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ControlPanelAuthenticationResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Privilege_Id" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Business.DeleteContent" Method="DeleteContent">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Multi" Parameter="multi" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Business.SearchContent" Method="SearchContent">
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <Parameter Name="EditedBy_Id" Parameter="editedBy_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Privilege_Id" Parameter="privilege_Id" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="KeyWord" Parameter="keyWord" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="ItsService" Parameter="itsService" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="SearchContentResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Show" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Business.SelectContent" Method="SelectContent">
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <Parameter Name="EditedBy_Id" Parameter="editedBy_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Privilege_Id" Parameter="privilege_Id" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="ItsService" Parameter="itsService" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="SelectContentResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Show" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Business.SelectContentList" Method="SelectContentList">
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <Parameter Name="ItsService" Parameter="itsService" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="SelectContentListResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Business.SelectOneContent" Method="SelectOneContent">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <ElementType Name="SelectOneContentResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ItsService" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Business.SelectSideNewsList" Method="SelectSideNewsList">
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <ElementType Name="SelectSideNewsListResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Business.SelectSideServiceList" Method="SelectSideServiceList">
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <ElementType Name="SelectSideServiceListResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Business.SelectSlideService" Method="SelectSlideService">
+    <Parameter Name="Language" Parameter="language" Type="System.String" DbType="Char(2)" />
+    <ElementType Name="SelectSlideServiceResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Category>
+    <Id>1</Id>
+    <Name>Constructor</Name>
+    <Description>Description of Constructor. Description of Constructor. Description of Constructor. Description of Constructor</Description>
+    <ImagePath>~/Uploads/Images/Category/construction.png</ImagePath>
+    <Active>true</Active>
+  </Category>
+  <Category>
+    <Id>2</Id>
+    <Name>Engineering</Name>
+    <Description>Engineering Description. Engineering Description</Description>
+    <ImagePath>~/Uploads/Images/Category/engineering.png</ImagePath>
+    <Active>true</Active>
+  </Category>
+  <Category>
+    <Id>3</Id>
+    <Name>Oil and Gas</Name>
+    <Description>Oil and Gas Description</Description>
+    <ImagePath>~/Uploads/Images/Category/oilgas.png</ImagePath>
+    <Active>false</Active>
+  </Category>
+  <Category>
+    <Id>4</Id>
+    <Name>Miscellaneous</Name>
+    <Description>Description of Miscellaneous. Description of Miscellaneous. Description of Miscellaneous.</Description>
+    <ImagePath>~/Uploads/Images/Category/miscel.png</ImagePath>
+    <Active>true</Active>
+  </Category>
+  <Category>
+    <Id>5</Id>
+    <Name>any</Name>
+    <Description>any data can describe the above</Description>
+    <ImagePath>~/Uploads/Images/Category/d.png</ImagePath>
+    <Active>false</Active>
+  </Category>
+</DocumentElement>

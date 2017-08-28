@@ -1,0 +1,106 @@
+﻿body { font-family:Verdana, arial, sans-serif; }
+input, textarea, select, span, label, #navigation { font-family:Verdana, arial, sans-serif; }
+
+a.more { padding-left: 11px; }
+#header { padding-left: 33px; padding-right: 17px;  }
+#logo { float: left; }
+.search select { float: left; font-family: verdana, arial, helvetica, serif; }
+.search input.field { float: left; font-size: 11px; font-family: verdana, arial, helvetica, serif; }
+.search input.search-btn { float: left; margin-left: 3px;}
+#navigation ul li { float: left; padding-right: 2px; }
+#navigation ul li.first a { padding-left: 38px; }
+.flex-control-nav { left: 480px; }
+.main ul li { padding-left: 10px; }
+.main .cols { padding-left: 5px; }
+.main .cols .col { float: left; }
+.main .cols .col + .col { padding-left: 20px; }
+.main .cols { padding-left: 5px; padding-right: 0; }
+.main .cols .col img { float: left; }
+.main .post  { padding-left: 40px;  }
+.main .post-cnt { float: left; }
+.main .content  { float:left;} 
+.main .content #content_list .box img {float: left; margin-right: 20px; }
+.main .testimonial strong.quote { left: -6px; font-family: georgia ,arial, helvetica, serif;}
+
+.socials-inner {padding-left: 158px;}
+.socials h3 { float: left; padding-right: 19px;}
+.socials ul li { padding-right: 18px; float: left; }
+.socials ul li a { padding-left: 28px;}
+.socials ul li a span { left: 0; }
+
+.footer-cols .col { float: left; }
+.footer-cols .col + .col { padding-left: 54px;  }
+.footer-cols .col ul li { padding-left: 9px;  }
+.footer-bottom .footer-nav { float: left; }
+.footer-bottom .footer-nav ul li { border-left: 1px solid #1a1f20; }
+.footer-bottom .footer-nav ul li.first { padding-left: 0 }
+
+/* #Media Queries
+================================================== */
+
+/* ipad portrait */
+@media only screen and ( min-width: 768px) and ( max-width: 980px )
+{
+    .slider-holder span.slider-b { left: 0px;}
+    #navigation ul li.first a { padding-left: 26px; }
+    .flex-control-nav { left: 346px; }
+	.slider ul.slides li { float: left; }
+	.main .cols { padding-left: 30px; padding-right: 22px;   }
+	.main .cols .col + .col { padding-left: 66px; }
+	.main .post { padding-left: 20px ;  }
+	.main section { padding-left: 20px; padding-right: 20px;  }
+    .main .content  { float:left;} 
+    .main .content #content_list .box img {float: left; margin-right: 20px;}
+	.socials-inner { padding-left: 70px; }
+	.footer-cols { padding-left: 40px; }
+	.footer-cols .col + .col { padding-left: 28px; }
+}
+
+@media only screen and ( max-width: 767px) 
+{
+    #navigation ul { left: 0;}
+    #navigation a.nav-btn { padding-left: 22px; }
+	#navigation ul li.first a { padding-left: 26px; }
+	.slider-holder span.slider-b { left: 0px;}
+	.flex-control-nav { left: 130px; }	
+	.slider ul.slides li .img-holder { left: 50%; margin-left: -145px;  }
+	.main .cols .col + .col { padding-left: 0px; }
+	.main .post  { padding-left: 20px; }
+	.socials-inner { padding-left: 10px; }
+	.footer-cols { padding-left: 10px; padding-right: 0; }
+	.footer-cols .col + .col { padding-left: 0px; }
+	/* The following Opposite Direction !Important */
+	.slider ul.slides li .img-holder { right: 0px; }
+	.slider ul.slides li .img-holder img { float:right;}
+	.main .post .map-holder { margin-right: 0px;  }
+    .main .side  { float:right;} 
+
+}
+/* The following Opposite Direction !Important */
+@media only screen and ( max-width: 767px) 
+{
+    #navigation a.nav-btn span.arr { right: 14px; }
+}
+
+.flex-caption {left: 0;}
+.flex-direction-nav li .prev {left: -40px;}
+/** BEGIN content_list **/
+#content_list .navigation {margin-left: 12px;}
+#content_list .navigation a:hover {padding-left: 10px; margin-right: 1px;}
+#contact-box table tr td span, label{ text-align:left;}
+/** END content_list **/
+
+/* The following Opposite Direction !Important */
+.search { float: right; }
+
+.main .cols .col-cnt { float: right; }
+.main .side  { float:right;} 
+.testimonial p.author { text-align: right; }
+#navigation ul li { background: url(images/nav-border.png) no-repeat right 0; }
+.main .post .map-holder { float: right; margin-right: 20px; }
+.footer-bottom p.copy { float: right; }
+.flex-direction-nav li .next {right: -40px;}
+
+
+
+

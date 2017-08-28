@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Admin/AdminSite.master" AutoEventWireup="true" CodeBehind="ManageSite.master.cs" Inherits="SmartCompany.Admin.Smart.ManageSite" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="AjaxControlToolkit" %>
+
+<%@ Register src="../Shared/WebUI/MenuBox.ascx" tagname="MenuBox" tagprefix="MukhtarWebUIControl" %>
+
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="../../Script/Jquery/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="../../Script/base.js" type="text/javascript"></script>
+</asp:Content>
+
+<asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolderAdmin" runat="server">
+    <MukhtarWebUIControl:MenuBox ID="mwcMenuBox" runat="server" />
+    <div class="shell">
+        <!-- Main -->
+		<div id="main">
+            <div class="cl">&nbsp;</div>
+            <!-- Content -->
+			<div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderSiteManage" runat="server">
+        
+                </asp:ContentPlaceHolder>            
+            </div><!-- End Content -->
+            <div class="cl">&nbsp;</div>
+        </div><!-- End Main -->
+    </div>
+</asp:Content>

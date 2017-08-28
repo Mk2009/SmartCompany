@@ -1,0 +1,33 @@
+﻿body{font-family: Verdana, sans-serif;}
+input, textarea, select, span, label { font-family: Verdana, sans-serif; font-size:13px; }
+
+.pagging a{ float:left; }
+.pagging span{ float:left; margin-left:5px; }
+ul#topnav {float: left;}
+ul#topnav li {float: left;}
+ul#topnav li span {float: left;}
+.box-head { text-align:left;}
+.box-head .title{ float:left; display:inline; }
+.table th{ text-align: left;}
+.pagging .info{float:left;}
+.msg-ok p{ text-align:left;}
+.msg-error p{text-align:left;}
+/*-------------------------------------*/
+.first_en{background-position:-44px 0;} 
+.first_ds{background-position:-66px 0;} 
+.prev_en{background-position:-88px 0;} 
+.prev_ds{background-position:-110px 0;} 
+.next_en{background-position:-132px 0;} 
+.next_ds{background-position:-154px 0;} 
+.last_en{background-position:-176px 0;} 
+.last_ds{background-position:-198px 0;} 
+/*-------------------------------------*/
+
+/* Opposite */
+.form .req { float:right;  }
+.icon_box {float:right;}
+.buttons { text-align: right }
+.buttons .button{ margin-left:3px;}
+.box-head .search input { float:right; }
+.box-head .icon{float:right;}
+.pagging .icon{float:right;}

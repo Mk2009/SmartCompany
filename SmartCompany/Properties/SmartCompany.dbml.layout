@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.125, 13.5" name="SmartCompany">
+  <DataContextMoniker Name="/SmartCompanyDataContext" />
+  <nestedChildShapes>
+    <classShape Id="82c9fcde-d28b-4a14-b988-556589be233d" absoluteBounds="1.25, 4, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/SmartCompanyDataContext/Privilege" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44959926-a814-4200-80f1-8557c1e9fe0b" absoluteBounds="1.2650000000000001, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="607f7709-b43e-4b6f-acc3-de695a886b7e" absoluteBounds="1.25, 0.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SmartCompanyDataContext/SysUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b63330be-cfaa-4ede-97b8-196cfd80a6b8" absoluteBounds="1.2650000000000001, 1.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.25 : 4); (2.25 : 3.35740397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SmartCompanyDataContext/Privilege/Privilege_SysUser" />
+      <nodes>
+        <classShapeMoniker Id="82c9fcde-d28b-4a14-b988-556589be233d" />
+        <classShapeMoniker Id="607f7709-b43e-4b6f-acc3-de695a886b7e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="37d365e1-9562-4951-b793-97d84fdb6dec" absoluteBounds="5.125, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SmartCompanyDataContext/SysUserLogStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f8d0138-78ef-4d93-a198-dcde0720dbbd" absoluteBounds="5.14, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 1.99120198567708); (6.09375 : 1.99120198567708); (6.09375 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SmartCompanyDataContext/SysUser/SysUser_SysUserLogStatus" />
+      <nodes>
+        <classShapeMoniker Id="607f7709-b43e-4b6f-acc3-de695a886b7e" />
+        <classShapeMoniker Id="37d365e1-9562-4951-b793-97d84fdb6dec" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="26aa3141-178b-4dbe-9d42-44e0fd14194a" absoluteBounds="8.875, 3.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SmartCompanyDataContext/LoginTry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce3d7f22-bb0b-44a6-82b2-0b6173812e54" absoluteBounds="8.89, 3.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ee3c398-8286-4af3-b2ee-c6289c2c9636" absoluteBounds="0.75, 8, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/SmartCompanyDataContext/Visitor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c89b8806-abcf-4567-87d4-fea97e911949" absoluteBounds="0.765, 8.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3cfb4807-0b0e-4f6c-9b85-a3238392d179" absoluteBounds="3.5, 8.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SmartCompanyDataContext/VisitorPage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f06a7be5-8df5-4f66-b537-70c1c8acdedb" absoluteBounds="3.515, 8.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 9.16429768880208); (3.16666666666667 : 9.16429768880208 : JumpStart); (3.33333333333333 : 9.16429768880208 : JumpEnd); (3.5 : 9.16429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SmartCompanyDataContext/Visitor/Visitor_VisitorPage" />
+      <nodes>
+        <classShapeMoniker Id="3ee3c398-8286-4af3-b2ee-c6289c2c9636" />
+        <classShapeMoniker Id="3cfb4807-0b0e-4f6c-9b85-a3238392d179" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3bea11a-71da-4fd0-9305-578b0e30653c" absoluteBounds="7.125, 0.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SmartCompanyDataContext/ContactUs" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98d1589a-d055-4688-9d07-bafff491efe7" absoluteBounds="7.1400000000000006, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f43b82c7-da5b-4062-944b-f4b8342474a9" absoluteBounds="4, 10.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/SmartCompanyDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="567d279d-1411-42d4-8074-a612d0ad56a1" absoluteBounds="4.015, 11.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5db64d2-43fd-4e47-a80e-f377ddb1d015" absoluteBounds="6.75, 11.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/SmartCompanyDataContext/ServiceTitle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a101d145-73f2-4571-9b8b-7841f94344c9" absoluteBounds="6.765, 11.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.781252 : 3.35740397135417); (2.781252 : 3.75); (3.5 : 3.75); (3.5 : 8.125); (3.25 : 8.125); (3.25 : 12.0489005533854); (4 : 12.0489005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SmartCompanyDataContext/SysUser/SysUser_Service" />
+      <nodes>
+        <classShapeMoniker Id="607f7709-b43e-4b6f-acc3-de695a886b7e" />
+        <classShapeMoniker Id="f43b82c7-da5b-4062-944b-f4b8342474a9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6 : 12.0104484049479); (6.75 : 12.0104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SmartCompanyDataContext/Service/Service_ServiceTitle" />
+      <nodes>
+        <classShapeMoniker Id="f43b82c7-da5b-4062-944b-f4b8342474a9" />
+        <classShapeMoniker Id="c5db64d2-43fd-4e47-a80e-f377ddb1d015" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

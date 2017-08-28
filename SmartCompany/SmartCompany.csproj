@@ -1,0 +1,905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B91C8DBD-A09B-4C66-BB8C-C04A70CD87D6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartCompany</RootNamespace>
+    <AssemblyName>SmartCompany</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\AjaxToolikt 2013\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MukhtarMA">
+      <HintPath>..\..\MukhtarMA\MukhtarMA\MukhtarMA\bin\MukhtarMA.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Logout.aspx" />
+    <Content Include="Admin\Shared\Upload\AsyncImageUpload.ascx" />
+    <Content Include="Admin\Shared\WebUI\Captcha\Captcha.ascx" />
+    <Content Include="Admin\Shared\WebUI\ImageSourceFrame.ascx" />
+    <Content Include="Admin\Shared\WebUI\MenuBox.ascx" />
+    <Content Include="Admin\Shared\WebUI\SendEmail.ascx" />
+    <Content Include="Admin\Smart\AboutCompany.aspx" />
+    <Content Include="Admin\Smart\CompanyInfo.aspx" />
+    <Content Include="Admin\Smart\Components\Category\DetailCategory.ascx" />
+    <Content Include="Admin\Smart\Components\Category\EntryCategory.ascx" />
+    <Content Include="Admin\Smart\Components\Category\ShowCategory.ascx" />
+    <Content Include="Admin\Smart\Components\Contact\DetailMessage.ascx" />
+    <Content Include="Admin\Smart\Components\Contact\ShowContact.ascx" />
+    <Content Include="Admin\Smart\Components\CoService\DetailService.ascx" />
+    <Content Include="Admin\Smart\Components\CoService\EntryService.ascx" />
+    <Content Include="Admin\Smart\Components\CoService\ShowService.ascx" />
+    <Content Include="Admin\Smart\Components\Home\AboutInfo.ascx" />
+    <Content Include="Admin\Smart\Components\Home\CompanyInfo.ascx" />
+    <Content Include="Admin\Smart\Components\Home\ContactInfo.ascx" />
+    <Content Include="Admin\Smart\Components\Home\Counter.ascx" />
+    <Content Include="Admin\Smart\Components\Home\Statistic.ascx" />
+    <Content Include="Admin\Smart\Components\Home\WebsiteInfo.ascx" />
+    <Content Include="Admin\Smart\Components\Membership\ChangePassword.ascx" />
+    <Content Include="Admin\Smart\Components\Membership\CurrentUser.ascx" />
+    <Content Include="Admin\Smart\Components\Membership\DetailUser.ascx" />
+    <Content Include="Admin\Smart\Components\Membership\EntryUser.ascx" />
+    <Content Include="Admin\Smart\Components\Membership\LoginUser.ascx" />
+    <Content Include="Admin\Smart\Components\Membership\ShowUser.ascx" />
+    <Content Include="Admin\Smart\Components\News\DetailNews.ascx" />
+    <Content Include="Admin\Smart\Components\News\EntryNews.ascx" />
+    <Content Include="Admin\Smart\Components\News\ShowNews.ascx" />
+    <Content Include="Admin\Smart\ContactInfo.aspx" />
+    <Content Include="Admin\Smart\CurrentUser.aspx" />
+    <Content Include="Admin\Smart\Dashboard.aspx" />
+    <Content Include="Admin\Smart\Default.aspx" />
+    <Content Include="Admin\Smart\ManageCategory.aspx" />
+    <Content Include="Admin\Smart\ManageContact.aspx" />
+    <Content Include="Admin\Smart\ManageNews.aspx" />
+    <Content Include="Admin\Smart\ManageService.aspx" />
+    <Content Include="Admin\Smart\ManageUser.aspx" />
+    <Content Include="Admin\Smart\WebsiteInfo.aspx" />
+    <Content Include="App_Data\ar\About.xml" />
+    <Content Include="App_Data\ar\Category.xml" />
+    <Content Include="App_Data\ar\Company.xml" />
+    <Content Include="App_Data\ar\Contact.xml" />
+    <Content Include="App_Data\ar\Home.xml" />
+    <Content Include="App_Data\ar\Website.xml" />
+    <Content Include="App_Data\en\About.xml" />
+    <Content Include="App_Data\en\Category.xml" />
+    <Content Include="App_Data\en\Company.xml" />
+    <Content Include="App_Data\en\Contact.xml" />
+    <Content Include="App_Data\en\Website.xml" />
+    <Content Include="App_Data\en\Home.xml" />
+    <Content Include="App_Data\Language.xml" />
+    <Content Include="App_Themes\Admin\Rtl.css" />
+    <Content Include="App_Themes\Admin\Images\close.png" />
+    <Content Include="App_Themes\Admin\Images\delete.png" />
+    <Content Include="App_Themes\Admin\Images\add-button.gif" />
+    <Content Include="App_Themes\Admin\Images\addnew_en.png" />
+    <Content Include="App_Themes\Admin\Images\del.gif" />
+    <Content Include="App_Themes\Admin\Images\edit.gif" />
+    <Content Include="App_Themes\Admin\Images\icons.png" />
+    <Content Include="App_Themes\Admin\Images\loading.gif" />
+    <Content Include="App_Themes\Admin\Images\msg-error.gif" />
+    <Content Include="App_Themes\Admin\Images\msg-ok.gif" />
+    <Content Include="App_Themes\Admin\Images\pagging.gif" />
+    <Content Include="App_Themes\Admin\Images\popUpLoader.gif" />
+    <Content Include="App_Themes\Admin\Images\spacer.gif" />
+    <Content Include="App_Themes\Admin\Images\tab.gif" />
+    <Content Include="App_Themes\Admin\Images\th.gif" />
+    <Content Include="App_Themes\Admin\Images\topnav_a.gif" />
+    <Content Include="App_Themes\Admin\Images\topnav_a.png" />
+    <Content Include="App_Themes\Admin\Images\topnav_s.gif" />
+    <Content Include="App_Themes\Admin\Images\topnav_s.png" />
+    <Content Include="App_Themes\Admin\Images\Upper.jpg" />
+    <Content Include="App_Themes\Admin\Images\upper.png" />
+    <Content Include="App_Themes\Admin\Images\upper2.png" />
+    <Content Include="App_Themes\Admin\Ltr.css" />
+    <Content Include="App_Themes\Admin\Style.css" />
+    <Content Include="App_Themes\bg.png" />
+    <Content Include="App_Themes\Rtl.css" />
+    <Content Include="App_Themes\Default\album.css" />
+    <Content Include="App_Themes\Default\Images\arr-footer-col.png" />
+    <Content Include="App_Themes\Default\Images\arr-ico.png" />
+    <Content Include="App_Themes\Default\Images\body.png" />
+    <Content Include="App_Themes\Default\Images\cols-shadow.png" />
+    <Content Include="App_Themes\Default\Images\control-nav.png" />
+    <Content Include="App_Themes\Default\Images\error_sign.png" />
+    <Content Include="App_Themes\Default\Images\footer-bottom.png" />
+    <Content Include="App_Themes\Default\Images\footer-lights.png" />
+    <Content Include="App_Themes\Default\Images\grey-btn.png" />
+    <Content Include="App_Themes\Default\Images\loader.gif" />
+    <Content Include="App_Themes\Default\Images\logo.png" />
+    <Content Include="App_Themes\Default\Images\m-slide-img.png" />
+    <Content Include="App_Themes\Default\Images\main.png" />
+    <Content Include="App_Themes\Default\Images\nav-arr.png" />
+    <Content Include="App_Themes\Default\Images\nav-border.png" />
+    <Content Include="App_Themes\Default\Images\navigation.png" />
+    <Content Include="App_Themes\Default\Images\next.png" />
+    <Content Include="App_Themes\Default\Images\prev.png" />
+    <Content Include="App_Themes\Default\Images\search-btn.png" />
+    <Content Include="App_Themes\Default\Images\section-shadow.png" />
+    <Content Include="App_Themes\Default\Images\slide-img.png" />
+    <Content Include="App_Themes\Default\Images\slider-bottom.png" />
+    <Content Include="App_Themes\Default\Images\slider-shadow.png" />
+    <Content Include="App_Themes\Default\Images\spacer.gif" />
+    <Content Include="App_Themes\Default\Images\t-slide-img.png" />
+    <Content Include="App_Themes\Default\Images\t-slider-bottom.png" />
+    <Content Include="App_Themes\Default\Style.css" />
+    <Content Include="App_Themes\Ltr.css" />
+    <Content Include="App_Themes\top.png" />
+    <Content Include="Index.html" />
+    <Content Include="Uploads\Images\UnderConstruction.png" />
+    <Content Include="App_Themes\under_const.css" />
+    <Content Include="Business.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ErrorPages\404.html" />
+    <Content Include="ErrorPages\ApplicationError.html" />
+    <Content Include="ErrorPages\BaseError.html" />
+    <Content Include="ErrorPages\GenericError.html" />
+    <Content Include="Global.asax" />
+    <Content Include="News.aspx" />
+    <Content Include="OurBusiness.aspx" />
+    <Content Include="Page.aspx" />
+    <Content Include="Script\base.js" />
+    <Content Include="Script\album\diapo.js" />
+    <Content Include="Script\album\jquery.easing.1.3.js" />
+    <Content Include="Script\album\jquery.hoverIntent.minified.js" />
+    <Content Include="Script\album\jquery.min.js" />
+    <Content Include="Script\album\jquery.mobile-1.0rc2.customized.min.js" />
+    <Content Include="Script\functions.js" />
+    <Content Include="Script\Jquery\jquery.flexslider-min.js" />
+    <Content Include="Script\Jquery\jquery-1.8.0.min.js" />
+    <Content Include="Services.aspx" />
+    <Content Include="TabTest.html" />
+    <Content Include="TabTest2.html" />
+    <Content Include="Uploads\Images\top.png" />
+    <Content Include="View\Content\AlbumBox.ascx" />
+    <Content Include="View\Content\BusinessList.ascx" />
+    <Content Include="View\Content\ContactUs.ascx" />
+    <Content Include="View\Content\ContentList.ascx" />
+    <Content Include="View\Content\GoogleMap.ascx" />
+    <Content Include="View\Content\StackholderList.ascx" />
+    <Content Include="View\Main\Footer.ascx" />
+    <Content Include="View\Main\Header.ascx" />
+    <Content Include="View\Main\Category.ascx" />
+    <Content Include="View\Main\Menu.ascx" />
+    <Content Include="View\Side\NewsList.ascx" />
+    <Content Include="View\Side\ServiceList.ascx" />
+    <Content Include="View\Main\SlideShow.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSite.master.cs">
+      <DependentUpon>AdminSite.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSite.master.designer.cs">
+      <DependentUpon>AdminSite.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shared\Code\BaseSys.cs" />
+    <Compile Include="Admin\Shared\Code\Email.cs" />
+    <Compile Include="Admin\Shared\Code\SharedLinq.cs" />
+    <Compile Include="Admin\Shared\Code\SharedValues.cs" />
+    <Compile Include="Admin\Shared\Upload\AsyncImageUpload.ascx.cs">
+      <DependentUpon>AsyncImageUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Shared\Upload\AsyncImageUpload.ascx.designer.cs">
+      <DependentUpon>AsyncImageUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shared\Upload\UploadHandler.ashx.cs">
+      <DependentUpon>UploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\Captcha\Captcha.ascx.cs">
+      <DependentUpon>Captcha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\Captcha\Captcha.ascx.designer.cs">
+      <DependentUpon>Captcha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\Captcha\CaptchaGenericHandler.ashx.cs">
+      <DependentUpon>CaptchaGenericHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\Captcha\Code\CaptchaImage.cs" />
+    <Compile Include="Admin\Shared\WebUI\Captcha\Code\Cryptography\Encryptor.cs" />
+    <Compile Include="Admin\Shared\WebUI\Captcha\Code\Cryptography\RandomText.cs" />
+    <Compile Include="Admin\Shared\WebUI\Captcha\Code\Cryptography\RNG.cs" />
+    <Compile Include="Admin\Shared\WebUI\ImageSourceFrame.ascx.cs">
+      <DependentUpon>ImageSourceFrame.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\ImageSourceFrame.ascx.designer.cs">
+      <DependentUpon>ImageSourceFrame.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\MenuBox.ascx.cs">
+      <DependentUpon>MenuBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\MenuBox.ascx.designer.cs">
+      <DependentUpon>MenuBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\SendEmail.ascx.cs">
+      <DependentUpon>SendEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Shared\WebUI\SendEmail.ascx.designer.cs">
+      <DependentUpon>SendEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\AboutCompany.aspx.cs">
+      <DependentUpon>AboutCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\AboutCompany.aspx.designer.cs">
+      <DependentUpon>AboutCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\CompanyInfo.aspx.cs">
+      <DependentUpon>CompanyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\CompanyInfo.aspx.designer.cs">
+      <DependentUpon>CompanyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Category\DetailCategory.ascx.cs">
+      <DependentUpon>DetailCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Category\DetailCategory.ascx.designer.cs">
+      <DependentUpon>DetailCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Category\EntryCategory.ascx.cs">
+      <DependentUpon>EntryCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Category\EntryCategory.ascx.designer.cs">
+      <DependentUpon>EntryCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Category\ShowCategory.ascx.cs">
+      <DependentUpon>ShowCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Category\ShowCategory.ascx.designer.cs">
+      <DependentUpon>ShowCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Contact\DetailMessage.ascx.cs">
+      <DependentUpon>DetailMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Contact\DetailMessage.ascx.designer.cs">
+      <DependentUpon>DetailMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Contact\ShowContact.ascx.cs">
+      <DependentUpon>ShowContact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Contact\ShowContact.ascx.designer.cs">
+      <DependentUpon>ShowContact.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\CoService\DetailService.ascx.cs">
+      <DependentUpon>DetailService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\CoService\DetailService.ascx.designer.cs">
+      <DependentUpon>DetailService.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\CoService\EntryService.ascx.cs">
+      <DependentUpon>EntryService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\CoService\EntryService.ascx.designer.cs">
+      <DependentUpon>EntryService.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\CoService\ShowService.ascx.cs">
+      <DependentUpon>ShowService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\CoService\ShowService.ascx.designer.cs">
+      <DependentUpon>ShowService.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\AboutInfo.ascx.cs">
+      <DependentUpon>AboutInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\AboutInfo.ascx.designer.cs">
+      <DependentUpon>AboutInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\CompanyInfo.ascx.cs">
+      <DependentUpon>CompanyInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\CompanyInfo.ascx.designer.cs">
+      <DependentUpon>CompanyInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\ContactInfo.ascx.cs">
+      <DependentUpon>ContactInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\ContactInfo.ascx.designer.cs">
+      <DependentUpon>ContactInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\Counter.ascx.cs">
+      <DependentUpon>Counter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\Counter.ascx.designer.cs">
+      <DependentUpon>Counter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\Statistic.ascx.cs">
+      <DependentUpon>Statistic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\Statistic.ascx.designer.cs">
+      <DependentUpon>Statistic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\WebsiteInfo.ascx.cs">
+      <DependentUpon>WebsiteInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Home\WebsiteInfo.ascx.designer.cs">
+      <DependentUpon>WebsiteInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\CurrentUser.ascx.cs">
+      <DependentUpon>CurrentUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\CurrentUser.ascx.designer.cs">
+      <DependentUpon>CurrentUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\DetailUser.ascx.cs">
+      <DependentUpon>DetailUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\DetailUser.ascx.designer.cs">
+      <DependentUpon>DetailUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\EntryUser.ascx.cs">
+      <DependentUpon>EntryUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\EntryUser.ascx.designer.cs">
+      <DependentUpon>EntryUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\LoginUser.ascx.cs">
+      <DependentUpon>LoginUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\LoginUser.ascx.designer.cs">
+      <DependentUpon>LoginUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\ShowUser.ascx.cs">
+      <DependentUpon>ShowUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\Membership\ShowUser.ascx.designer.cs">
+      <DependentUpon>ShowUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\News\DetailNews.ascx.cs">
+      <DependentUpon>DetailNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\News\DetailNews.ascx.designer.cs">
+      <DependentUpon>DetailNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\News\EntryNews.ascx.cs">
+      <DependentUpon>EntryNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\News\EntryNews.ascx.designer.cs">
+      <DependentUpon>EntryNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\News\ShowNews.ascx.cs">
+      <DependentUpon>ShowNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Components\News\ShowNews.ascx.designer.cs">
+      <DependentUpon>ShowNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\ContactInfo.aspx.cs">
+      <DependentUpon>ContactInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\ContactInfo.aspx.designer.cs">
+      <DependentUpon>ContactInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\CurrentUser.aspx.cs">
+      <DependentUpon>CurrentUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\CurrentUser.aspx.designer.cs">
+      <DependentUpon>CurrentUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageCategory.aspx.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageCategory.aspx.designer.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageContact.aspx.cs">
+      <DependentUpon>ManageContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageContact.aspx.designer.cs">
+      <DependentUpon>ManageContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageNews.aspx.cs">
+      <DependentUpon>ManageNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageNews.aspx.designer.cs">
+      <DependentUpon>ManageNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageService.aspx.cs">
+      <DependentUpon>ManageService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageService.aspx.designer.cs">
+      <DependentUpon>ManageService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageSite.master.cs">
+      <DependentUpon>ManageSite.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageSite.master.designer.cs">
+      <DependentUpon>ManageSite.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageUser.aspx.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\ManageUser.aspx.designer.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\SiteAdmin.Master.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\SiteAdmin.Master.designer.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Smart\WebsiteInfo.aspx.cs">
+      <DependentUpon>WebsiteInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Smart\WebsiteInfo.aspx.designer.cs">
+      <DependentUpon>WebsiteInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Company.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Company.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Business.aspx.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business.aspx.designer.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OurBusiness.aspx.cs">
+      <DependentUpon>OurBusiness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OurBusiness.aspx.designer.cs">
+      <DependentUpon>OurBusiness.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.ar-sy.Designer.cs">
+      <DependentUpon>Resources.ar-sy.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SmartCompany.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartCompany.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Content\AlbumBox.ascx.cs">
+      <DependentUpon>AlbumBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Content\AlbumBox.ascx.designer.cs">
+      <DependentUpon>AlbumBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Content\BusinessList.ascx.cs">
+      <DependentUpon>BusinessList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Content\BusinessList.ascx.designer.cs">
+      <DependentUpon>BusinessList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Content\ContactUs.ascx.cs">
+      <DependentUpon>ContactUs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Content\ContactUs.ascx.designer.cs">
+      <DependentUpon>ContactUs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Content\ContentList.ascx.cs">
+      <DependentUpon>ContentList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Content\ContentList.ascx.designer.cs">
+      <DependentUpon>ContentList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Content\GoogleMap.ascx.cs">
+      <DependentUpon>GoogleMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Content\GoogleMap.ascx.designer.cs">
+      <DependentUpon>GoogleMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Content\StackholderList.ascx.cs">
+      <DependentUpon>StackholderList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Content\StackholderList.ascx.designer.cs">
+      <DependentUpon>StackholderList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Main\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Main\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\Category.ascx.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Main\Category.ascx.designer.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Main\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Side\NewsList.ascx.cs">
+      <DependentUpon>NewsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Side\NewsList.ascx.designer.cs">
+      <DependentUpon>NewsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Side\ServiceList.ascx.cs">
+      <DependentUpon>ServiceList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Side\ServiceList.ascx.designer.cs">
+      <DependentUpon>ServiceList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\SlideShow.ascx.cs">
+      <DependentUpon>SlideShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Main\SlideShow.ascx.designer.cs">
+      <DependentUpon>SlideShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebSite.Master.cs">
+      <DependentUpon>WebSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebSite.Master.designer.cs">
+      <DependentUpon>WebSite.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Smart\Components\Category\App_LocalResources\EntryCategory.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Category\App_LocalResources\EntryCategory.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Category\App_LocalResources\DetailCategory.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Category\App_LocalResources\DetailCategory.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Category\App_LocalResources\ShowCategory.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Category\App_LocalResources\ShowCategory.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Contact\App_LocalResources\DetailMessage.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Contact\App_LocalResources\DetailMessage.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Contact\App_LocalResources\ShowContact.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Contact\App_LocalResources\ShowContact.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\CoService\App_LocalResources\DetailService.ascx.resx" />
+    <Content Include="Admin\Smart\Components\CoService\App_LocalResources\DetailService.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\CoService\App_LocalResources\EntryService.ascx.resx" />
+    <Content Include="Admin\Smart\Components\CoService\App_LocalResources\EntryService.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\CoService\App_LocalResources\ShowService.ascx.resx" />
+    <Content Include="Admin\Smart\Components\CoService\App_LocalResources\ShowService.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\News\App_LocalResources\EntryNews.ascx.resx" />
+    <Content Include="Admin\Smart\Components\News\App_LocalResources\EntryNews.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\News\App_LocalResources\DetailNews.ascx.resx" />
+    <Content Include="Admin\Smart\Components\News\App_LocalResources\DetailNews.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\News\App_LocalResources\ShowNews.ascx.resx" />
+    <Content Include="Admin\Smart\Components\News\App_LocalResources\ShowNews.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\AboutInfo.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\AboutInfo.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\CompanyInfo.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\CompanyInfo.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\ContactInfo.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\ContactInfo.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\Counter.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\Counter.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\Statistic.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\Statistic.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\WebsiteInfo.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Home\App_LocalResources\WebsiteInfo.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\ChangePassword.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\ChangePassword.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\CurrentUser.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\CurrentUser.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\DetailUser.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\DetailUser.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\EntryUser.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\EntryUser.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\LoginUser.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\LoginUser.ascx.ar-sy.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\ShowUser.ascx.resx" />
+    <Content Include="Admin\Smart\Components\Membership\App_LocalResources\ShowUser.ascx.ar-sy.resx" />
+    <Content Include="Admin\Shared\WebUI\App_LocalResources\MenuBox.ascx.resx" />
+    <Content Include="Admin\Shared\WebUI\App_LocalResources\MenuBox.ascx.ar-sy.resx" />
+    <Content Include="Admin\Shared\WebUI\App_LocalResources\SendEmail.ascx.resx" />
+    <Content Include="Admin\Shared\WebUI\App_LocalResources\SendEmail.ascx.ar-sy.resx" />
+    <EmbeddedResource Include="Properties\Resources.ar-sy.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ar-sy.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="View\Content\App_LocalResources\ContactUs.ascx.resx" />
+    <Content Include="View\Content\App_LocalResources\ContactUs.ascx.ar-sy.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebSite.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Shared\WebUI\Captcha\CaptchaGenericHandler.ashx" />
+    <Content Include="Admin\Smart\SiteAdmin.Master" />
+    <Content Include="Admin\Shared\Upload\UploadHandler.ashx" />
+    <Content Include="Admin\AdminSite.master" />
+    <Content Include="Admin\Smart\ManageSite.master" />
+    <None Include="App_Data\Company.xsc">
+      <DependentUpon>Company.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\Company.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Company.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Data\Company.xss">
+      <DependentUpon>Company.xsd</DependentUpon>
+    </None>
+    <Content Include="Default.Master" />
+    <None Include="Properties\PublishProfiles\smartCo.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\SmartCompany.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SmartCompany.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SmartCompany.dbml.layout">
+      <DependentUpon>SmartCompany.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\Images\Category\" />
+    <Folder Include="View\Bo3One\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4471</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

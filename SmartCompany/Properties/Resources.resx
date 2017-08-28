@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutMenu" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ActiveFalse" xml:space="preserve">
+    <value>Not active</value>
+  </data>
+  <data name="ActiveTrue" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AddActivity" xml:space="preserve">
+    <value>Add new activity</value>
+  </data>
+  <data name="AddCategory" xml:space="preserve">
+    <value>Add new category</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="BusinessMenu" xml:space="preserve">
+    <value>Our Business</value>
+  </data>
+  <data name="CategoryCount" xml:space="preserve">
+    <value>Category(ies)</value>
+  </data>
+  <data name="ConfirmDeleteImage" xml:space="preserve">
+    <value>Are sure you want to delete this image?</value>
+  </data>
+  <data name="ConfirmDeleteMessage" xml:space="preserve">
+    <value>Are sure you want to delete the current record?</value>
+  </data>
+  <data name="ConfirmMultipleActions" xml:space="preserve">
+    <value>Are sure you want to execute this action to all selected records?</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactMenu" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DoneBy" xml:space="preserve">
+    <value>Done by</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ErrorCaptchaCode" xml:space="preserve">
+    <value>Sorry, you entered wrong code</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>The system can not perform this step as a result of violation of rules</value>
+  </data>
+  <data name="FailureValid" xml:space="preserve">
+    <value>You cannot perform this step in this way - check validation first</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeMenu" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="LogoImageUpload" xml:space="preserve">
+    <value>Image Upload (Logo ) : [Width: 160px - High: 32px]</value>
+  </data>
+  <data name="ManageCategory" xml:space="preserve">
+    <value>Manage Categories</value>
+  </data>
+  <data name="ManageActivity" xml:space="preserve">
+    <value>Manage Activities</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="NewsCount" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="NewsMenu" xml:space="preserve">
+    <value>Our Activities</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoAction" xml:space="preserve">
+    <value>Operation can not be performed in this way</value>
+  </data>
+  <data name="NoDelete" xml:space="preserve">
+    <value>You cannot delete data in this way</value>
+  </data>
+  <data name="NormalImageUpload" xml:space="preserve">
+    <value>Image Upload: [Width: 540px - High: 346px]</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="OurActivities" xml:space="preserve">
+    <value>Our Activities</value>
+  </data>
+  <data name="OurBusiness" xml:space="preserve">
+    <value>Our Business</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Sorry, the page you requested has been deleted or not found in our server</value>
+  </data>
+  <data name="MainTitle" xml:space="preserve">
+    <value>Smart Company</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ModifiedDate" xml:space="preserve">
+    <value>Published date</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search result(s)</value>
+  </data>
+  <data name="SendFailure" xml:space="preserve">
+    <value>The system can not perform this step as a result of violation of rules</value>
+  </data>
+  <data name="SendNotAccept" xml:space="preserve">
+    <value>Thank you for sending us a message, but only one message is acceptable for each visitor in day.</value>
+  </data>
+  <data name="SendSucceed" xml:space="preserve">
+    <value>Your message has been sent, thank you.</value>
+  </data>
+  <data name="ServiceMenu" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="ShowData" xml:space="preserve">
+    <value>Show data</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Your data has been saved successfully</value>
+  </data>
+  <data name="XmlFileNotFound" xml:space="preserve">
+    <value>Please note: the destination xml file is not found! contact system provider.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ActivityEntry" xml:space="preserve">
+    <value>Activities Entry</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Found" xml:space="preserve">
+    <value>This title is already found in database</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>The entry</value>
+  </data>
+  <data name="Successfully" xml:space="preserve">
+    <value>has been saved successfully</value>
+  </data>
+  <data name="AddService" xml:space="preserve">
+    <value>Add new service</value>
+  </data>
+  <data name="ServiceEntry" xml:space="preserve">
+    <value>Services Entry</value>
+  </data>
+  <data name="ManageService" xml:space="preserve">
+    <value>Manage Services</value>
+  </data>
+  <data name="CategoryEntry" xml:space="preserve">
+    <value>Categories Entry</value>
+  </data>
+  <data name="CategoryImageUpload" xml:space="preserve">
+    <value>Image Upload: [Width: 200px - High: 150px]</value>
+  </data>
+  <data name="SelectOne" xml:space="preserve">
+    <value>Select one</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="MachineName" xml:space="preserve">
+    <value>Machine name</value>
+  </data>
+  <data name="SuccessSentEmail" xml:space="preserve">
+    <value>Your Message has been sent successfully</value>
+  </data>
+  <data name="UserEntry" xml:space="preserve">
+    <value>User Name Entry</value>
+  </data>
+  <data name="ManageUser" xml:space="preserve">
+    <value>Manage Users</value>
+  </data>
+  <data name="AddUser" xml:space="preserve">
+    <value>Add new user</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>The old password is incorrect</value>
+  </data>
+  <data name="ChangePassButton" xml:space="preserve">
+    <value>Change your password</value>
+  </data>
+  <data name="CurrentUserButton" xml:space="preserve">
+    <value>Current user data</value>
+  </data>
+  <data name="WrongLogin" xml:space="preserve">
+    <value>Username or password is incorrect</value>
+  </data>
+  <data name="NoAdminPermission" xml:space="preserve">
+    <value>Sorry, you have been stoped using this panel temporary, please conduct your company admin.</value>
+  </data>
+  <data name="LogoutMessage" xml:space="preserve">
+    <value>You logout successfully, it will redirect to main page</value>
+  </data>
+  <data name="OurCompany" xml:space="preserve">
+    <value>Our Company</value>
+  </data>
+  <data name="OurMission" xml:space="preserve">
+    <value>Our Mission</value>
+  </data>
+  <data name="OurVision" xml:space="preserve">
+    <value>Our Vision</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+  <data name="OurProfile" xml:space="preserve">
+    <value>Our Profile</value>
+  </data>
+  <data name="WhoAreWe" xml:space="preserve">
+    <value>Who Are We</value>
+  </data>
+  <data name="MoreNewsActivities" xml:space="preserve">
+    <value>More news and activities</value>
+  </data>
+  <data name="MoreServices" xml:space="preserve">
+    <value>More services</value>
+  </data>
+  <data name="NewsActivities" xml:space="preserve">
+    <value>News and Activities</value>
+  </data>
+  <data name="OurServices" xml:space="preserve">
+    <value>Our Services</value>
+  </data>
+  <data name="SearchToolTip" xml:space="preserve">
+    <value>keywords here</value>
+  </data>
+  <data name="HtmlDir" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+  <data name="CssFile" xml:space="preserve">
+    <value>Ltr.css</value>
+  </data>
+  <data name="LogoImage" xml:space="preserve">
+    <value>logo.png</value>
+  </data>
+  <data name="Dir" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="WelcomeUser" xml:space="preserve">
+    <value>Welcome </value>
+  </data>
+  <data name="AboutCompanyPage" xml:space="preserve">
+    <value>AboutCompany</value>
+  </data>
+  <data name="CompanyInfoPage" xml:space="preserve">
+    <value>CompanyInfo</value>
+  </data>
+  <data name="CurrentUserPage" xml:space="preserve">
+    <value>CurrentUser</value>
+  </data>
+  <data name="DashboardPage" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="LoginPage" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LogoutPage" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="ManageContactPage" xml:space="preserve">
+    <value>Manage Contacts</value>
+  </data>
+  <data name="WebsiteInfoPage" xml:space="preserve">
+    <value>Website Information</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright Smart Website - Mobile: 967-713171018</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Image Url From Internet</value>
+  </data>
+</root>

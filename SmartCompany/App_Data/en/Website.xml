@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Website>
+    <Company>Company name</Company>
+    <Title>Website of Your Company</Title>
+    <Logo>~/Uploads/Images/logo.png</Logo>
+    <Copyright>Copyright</Copyright>
+    <WebDeveloper>Mukhtar MA - M:967-713171018</WebDeveloper>
+  </Website>
+</DocumentElement>

@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Category>
+    <Id>1</Id>
+    <Name>انشأأت</Name>
+    <Description>وصف الانشأأت. وصف الانشأأت. وصف الانشأأت. وصف الانشأأت</Description>
+    <ImagePath>~/Uploads/Images/Category/construction.png</ImagePath>
+    <Active>true</Active>
+  </Category>
+  <Category>
+    <Id>2</Id>
+    <Name>هندسة</Name>
+    <Description>وصف الهندسة. وصف الهندسة</Description>
+    <ImagePath>~/Uploads/Images/Category/engineering.png</ImagePath>
+    <Active>true</Active>
+  </Category>
+  <Category>
+    <Id>3</Id>
+    <Name>نفط وغاز</Name>
+    <Description>وصف النفط وغاز</Description>
+    <ImagePath>~/Uploads/Images/Category/oilgas.png</ImagePath>
+    <Active>false</Active>
+  </Category>
+  <Category>
+    <Id>4</Id>
+    <Name>متنوعات</Name>
+    <Description>وصف المتنوعات. وصف المتنوعات. وصف المتنوعات.</Description>
+    <ImagePath>~/Uploads/Images/Category/miscel.png</ImagePath>
+    <Active>true</Active>
+  </Category>
+  <Category>
+    <Id>5</Id>
+    <Name>weee</Name>
+    <Description>ddd</Description>
+    <ImagePath>~/Uploads/Images/Category/21.jpg</ImagePath>
+    <Active>true</Active>
+  </Category>
+</DocumentElement>

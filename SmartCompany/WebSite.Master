@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebSite.master.cs" Inherits="SmartCompany.WebSite" %>
+
+<%@ Register src="View/Main/Header.ascx" tagname="Header" tagprefix="MukhtarWebUIControl" %>
+<%@ Register src="View/Main/Menu.ascx" tagname="Menu" tagprefix="MukhtarWebUIControl" %>
+<%@ Register src="View/Main/SlideShow.ascx" tagname="SlideShow" tagprefix="MukhtarWebUIControl" %>
+<%@ Register src="View/Side/NewsList.ascx" tagname="NewsList" tagprefix="MukhtarWebUIControl" %>
+<%@ Register src="View/Main/Footer.ascx" tagname="Footer" tagprefix="MukhtarWebUIControl" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html id="html" xmlns="http://www.w3.org/1999/xhtml" runat="server">
+<head runat="server">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>Smart Company</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
+    <link href="App_Themes/Default/Style.css" rel="stylesheet" type="text/css" />
+    <link id="css" runat="server" rel="stylesheet" type="text/css" />
+    
+
+    <script src="Script/Jquery/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="Script/Jquery/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script src="Script/functions.js" type="text/javascript"></script>
+    <!--
+    <script src="Script/Jquery/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    -->
+
+    <asp:ContentPlaceHolder ID="headWS" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="formWS" runat="server">
+    <!-- wrapper -->
+	<div id="wrapper">
+        <!-- shell -->
+	    <div class="shell">
+            <!-- container -->
+		    <div class="container">
+            	<!-- header -->
+				<div id="header">
+                    <MukhtarWebUIControl:Header ID="mwcHeader" runat="server" />
+                </div><!-- end of header -->
+                <nav id="navigation">
+                    <a href="#" class="nav-btn"><asp:Label ID="lbHomeNav" runat="server" Text="HOME" /><span class="arr"></span></a>
+                    <MukhtarWebUIControl:Menu ID="mwcMenu" runat="server" />
+                </nav>
+
+                <!-- slider -->
+				<div class="m-slider">
+				    <MukhtarWebUIControl:SlideShow ID="mwcSlideShow" runat="server" Visible="False" />
+				</div>		
+				<!-- end of slider -->
+
+                <!-- main -->
+				<div class="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderWS" runat="server">
+        
+                </asp:ContentPlaceHolder>				
+                </div>
+                <!-- end of main -->
+
+                <div id="footer">
+                <MukhtarWebUIControl:Footer ID="mwcFooter" runat="server" />
+                </div>
+
+            </div><!-- end of container -->
+        </div><!-- end of shell -->
+    </div><!-- end of wrappert -->
+    </form>
+</body>
+
+</html>

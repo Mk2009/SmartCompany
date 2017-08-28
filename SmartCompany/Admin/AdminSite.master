@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSite.master.cs" Inherits="SmartCompany.Admin.AdminSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html id="html" runat="server" xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+
+<head runat="server">
+
+    <title>Smart Company Control Panel</title>
+
+    <link href="../App_Themes/Admin/Style.css" rel="stylesheet" type="text/css" />
+    <link id="dirCss" runat="server" href="../../App_Themes/Admin/Ltr.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+
+<body>
+    <!-- [enctype="multipart/form-data"] !important to let ajax upload works--->
+    <form id="formMain" runat="server" enctype="multipart/form-data">
+    <!-- Container -->
+    <div id="container">
+        <div id="upper"></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderAdmin" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+            <asp:Label ID="lbCopyright" runat="server" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>

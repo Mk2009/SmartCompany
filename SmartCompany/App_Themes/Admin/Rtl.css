@@ -1,0 +1,44 @@
+﻿body{font-family:Tahoma, Arial, sans-serif;}
+input, textarea, select, span, label { font-family: Tahoma, Arial, sans-serif; font-size:13px; }
+
+.pagging a{ float:right; }
+.pagging span{ float:right; margin-right:5px; }
+ul#topnav {float: right;}
+ul#topnav li {float: right;}
+ul#topnav li span {float: right;}
+.box-head { text-align:right;}
+.box-head .title{ float:right; display:inline; }
+.table th{ text-align: right;}
+.pagging .info{float:right;}
+.msg-ok p{ text-align:right;}
+.msg-error p{text-align:right;}
+/*-------------------------------------*
+.first_en{background-position:-176px 0;} 
+.first_ds{background-position:-198px 0;} 
+.prev_en{background-position:-132px 0;} 
+.prev_ds{background-position:-154px 0;} 
+.next_en{background-position:-88px 0;} 
+.next_ds{background-position:-110px 0;} 
+.last_en{background-position:-44px 0;} 
+.last_ds{background-position:-66px 0;} 
+/*-------------------------------------*/
+
+/*-------------------------------------*/
+.first_en{background-position:-44px 0;} 
+.first_ds{background-position:-66px 0;} 
+.prev_en{background-position:-88px 0;} 
+.prev_ds{background-position:-110px 0;} 
+.next_en{background-position:-132px 0;} 
+.next_ds{background-position:-154px 0;} 
+.last_en{background-position:-176px 0;} 
+.last_ds{background-position:-198px 0;} 
+/*-------------------------------------*/
+
+/* Opposite */
+.form .req { float:left;  }
+.icon_box {float:left;}
+.buttons { text-align: left }
+.buttons .button{ margin-right:3px;}
+.box-head .search input { float:left; }
+.pagging .icon input{float:left;}
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<smartcompany>
+  
+  <Language>
+    <Name>English</Name>
+    <Value>en-US</Value>
+  </Language>
+  
+  <Language>
+    <Name>العربية</Name>
+    <Value>ar-SY</Value>
+  </Language>
+  
+</smartcompany>
