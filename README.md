@@ -1,4 +1,4 @@
-# SmartCompany
+# General-Company-Website
 This is an ASP.NET C# website for a company. 
 I built it in Visual Studio 2012 and upgraded it to Visual Studio 2015. 
 
